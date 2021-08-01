@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Edupro</title>
+      <link rel="stylesheet" href="/style3.css">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	  
+</head>
+
+
+<body>
+
+
+
+<div class="login-wrap">
+ 
+	<div class="login-html">
+                  <p class="w3-center"><img src="/Users/User/Desktop/Edupro/logor.png" class="w3-circle" style="height:120px;width:120px" alt="Avatar"></p> 
+		<label >Create a Lesson Here</label>
+
+
+		
+		<div class='login-form'>
+             {{#if message}}
+				<h4 style="color: red;">{{message}}</h4>
+			{{/if}}            
+            <form action="/auth/CreateLesson" method="POST">
+
+
+                <div class="sign-up-htm">
+				<div class="group">
+					<label for="LessonCategory" class="label">Choose a Category</label>
+                    <select class="input" name="LessonCategory" id="LessonCategory" >
+                        <option value="ΜΑΘΗΜΑΤΙΚΑ">ΜΑΘΗΜΑΤΙΚΑ</option>
+                        <option value="ΥΠΟΛΟΓΙΣΤΕΣ">ΥΠΟΛΟΓΙΣΤΕΣ</option>
+                        <option value="ΜΟΥΣΙΚΗ">ΜΟΥΣΙΚΗ</option>
+                        <option value="ΤΕΧΝΕΣ">ΤΕΧΝΕΣ</option>
+                    </select>
+				</div>
+
+                <div class="group">
+					<label for="LessonName" class="label">Lesson Name</label>
+					<input id="LessonName" type="text" class="input" name="LessonName" required>
+				</div>
+                                
+				<div class="group">
+					<label for="LessonPricePerHour" class="label">Price Per Hour</label>
+                    <input type="number" id="LessonPricePerHour" class="input" name="LessonPricePerHour" min="1" max="50" required>
+				</div>
+
+				<div class="group">
+					<label for="LessonΝecessaryΚnowledge" class="label">Lesson Νecessary Κnowledge</label>
+					<input id="LessonΝecessaryΚnowledge" type="text" class="input" name="LessonΝecessaryΚnowledge" required>
+				</div>
+
+				<div class="group">
+					<label for="LessonReviews" class="label">Lesson's Reviews</label>
+					<input id="LessonReviews" type="text" class="input" name="LessonReviews" required>
+				</div>
+				
+                <div class="group">
+			        <input  type="submit" class="button" value="Create Lesson"></div>
+                </div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+</body>
+</html>

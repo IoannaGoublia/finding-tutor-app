@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<title>Edupro</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script> <!----------    media Slide down ---->
+	  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+           <link rel="stylesheet" href="/style4.css">
+              <link rel="icon" href="https://www.podilatis.gr/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/a/lastfs_4.jpg">
+           
+             <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/style5.css"> 
+</head>
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="topnav" id="myTopnav">
+                <a href="/auth/home">Home</a>
+       
+          <a href="/auth/categories">Categories</a>
+       
+          <a href="/auth/news">News</a>
+      
+          <a href="/auth/About">About</a>
+       
+        
+          <a href="/auth/contact">Contact</a>
+           <a href="/auth/logout">Logout</a>
+       
+          <a href="/auth/profile">Profile</a>
+         
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+{{#if message}}
+	<h4 style="color: red;">{{message}}</h4>
+{{/if}}
+
+
+<h2>News</h2>
+
+                    
+
+
+<section class="timeline">
+  <ul>
+    <li>
+      <div>
+        <time>Vaccination in schools</time> <embed  type="text/html" src="https://news.elearninginside.com/education-in-2021-predictions-and-guidance-from-dr-rhianna-rogers/"  width="320" height="200">
+       </div>
+    </li>
+    <li>
+      <div>
+        <time>Online Education</time> <embed  type="text/html" src="https://news.elearninginside.com/education-in-2021-predictions-and-guidance-from-dr-rhianna-rogers/"  width="320" height="200">
+      </div>
+    </li>
+  
+        <li>
+      <div>
+        <time>Vaccination in schools</time> <embed  type="text/html" src="https://news.elearninginside.com/education-in-2021-predictions-and-guidance-from-dr-rhianna-rogers/"  width="320" height="200">
+       </div>
+    </li>
+    <li>
+      <div>
+        <time>Online Education</time> <embed  type="text/html" src="https://news.elearninginside.com/education-in-2021-predictions-and-guidance-from-dr-rhianna-rogers/"  width="320" height="200">
+      </div>
+    </li>
+  
+  </ul>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+</footer>
+
+<script>
+(function() {
+
+  'use strict';
+
+  // define variables
+  var items = document.querySelectorAll(".timeline li");
+
+  // check if an element is in viewport
+  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+
+})();
+
+
+
+
+
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>

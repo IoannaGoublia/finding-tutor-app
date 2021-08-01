@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+<title> EduPro </title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script> <!----------    media Slide down ---->
+	  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+           <link rel="stylesheet" href="/style4.css">
+              <link rel="icon" href="https://www.podilatis.gr/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/a/lastfs_4.jpg">
+           
+             <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="/style5.css"> 
+				 <link rel="stylesheet" href="/style7.css"> 
+				 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  
+</head>
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+</style>
+<body>
+        <!-- Navbar (sit on top) -->
+<div class="topnav" id="myTopnav">
+                <a href="/auth/home">Home</a>
+       
+          <a href="/auth/categories">Categories</a>
+       
+          <a href="/auth/news">News</a>
+      
+          <a href="/auth/About">About</a>
+       
+        
+          <a href="/auth/contact">Contact</a>
+           <a href="/auth/logout">Logout</a>
+       
+          <a href="/auth/profile">Profile</a>
+         <p style="color:brown">C++</p>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px; height:190px" id="home">
+ 
+   <div  style="max-width:100%; ">
+				<img class="mySlides" src="https://c1.peakpx.com/wallpaper/152/80/6/macbook-pro-on-grayscale-photography-wallpaper-preview.jpg" height="513" style="width:100% ">
+				<img class="mySlides" src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/black-and-white-violin-gabe-knowls.jpg" height="513" style="width:100%">
+				<img class="mySlides" src="https://i.pinimg.com/originals/c9/04/dc/c904dc6dd3524873e665442dea2b7652.jpg" height="513" style="width:100%">
+				<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:90%;">
+				<div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+				<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+				</div>
+				
+			</div>
+  <div class="w3-display-middle w3-center">
+   
+  
+		  
+
+ 
+</header>
+{{#if message}}
+	<h4 style="color: red;">{{message}}</h4>
+{{/if}}
+
+
+
+
+
+ 
+
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+	  
+     <div class="w3-col l3 m6 w3-margin-bottom">
+		 <div class="map" style="height:300px; width: 2000px; margin:none; "  id="map"></div>
+      <div class="w3-display-container">
+       
+    
+  
+
+  
+  
+    	<div id="main" >
+		  
+        <!-- <h1 class="w3-xxlarge w3-text-white"><p class="w3-padding w3-black w3-opacity-min" style="content-align:center">C++</p> 
+   
+   
+   </h1> -->
+ 
+         
+         
+
+        
+  
+	  
+	  
+		   {{#each data}}
+           
+           <div class="work-experience1">
+			    <img  class="w3-circle" style="height:90px; width: 90px " src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" alt="Cody Man">
+  <a href="/auth/profprof/{{this.ProfessorID}}">
+			    {{this.ProfessorLastName}}
+                      {{this.ProfessorFirstName}}</a><br>
+    <p style=" color:rgb(170, 198, 255);"><em>Location:</em>{{this.ProfessorLocation}}</p>
+	 <p>Service Areas: {{this.ProfessorServicesArea}}</p>
+     <p style=" color:rgb(170, 198, 255);">Skills: {{this.ProfessorSkills}}</p>
+      <p style=" color:rgb(170, 198, 255);">Lessons: {{this.LessonCategory}}</p>
+      <p style=" color:rgb(170, 198, 255);">Reviews: {{this.LessonCategory}}</p>
+   
+   </div>
+  
+        
+  
+   
+   
+   {{/each}}
+   
+   </div>
+   </div>
+   </div>
+ </div>
+</div>
+ </div>
+</div>
+</div>
+
+<!--Chat Bot ---------------------------------------------------------------------------------->
+<div id='whatsapp-chat' class='hide'>
+<div class='header-chat'>
+<div class='head-home'><h3>Hello!</h3>
+<p>Click one of our representatives below to chat on WhatsApp or send us an email to rioblanter@gmail.com</p></div>
+<div class='get-new hide'><div id='get-label'></div><div id='get-nama'></div></div></div>
+<div class='home-chat'>
+<!-- Info Contact Start -->
+<a class='informasi' href='javascript:void' title='Chat Whatsapp'>
+<div class='info-avatar'><img src='https://2.bp.blogspot.com/-y6xNA_8TpFo/XXWzkdYk0MI/AAAAAAAAA5s/RCzTBJ_FbMwVt5AEZKekwQqiDNqdNQJjgCLcBGAs/s70/supportmale.png'/></div>
+<div class='info-chat'>
+<span class='chat-label'>Support</span>
+<span class='chat-nama'>Customer Service 1</span>
+</div><span class='my-number'>6281977094280</span>
+</a>
+<!-- Info Contact End -->
+<!-- Info Contact Start -->
+<a class='informasi' href='javascript:void' title='Chat Whatsapp'>
+<div class='info-avatar'><img src='https://4.bp.blogspot.com/-X1Xs2iRKabY/XXWzkqQ-iDI/AAAAAAAAA5w/HSyhR0gIXvUzlAx5XgaZzmlrCJkTgrOFQCLcBGAs/s70/supportfemale.png'/></div>
+<div class='info-chat'>
+<span class='chat-label'>Sales</span>
+<span class='chat-nama'>Customer Service 2</span>
+</div><span class='my-number'>6222222222</span>
+</a>
+<!-- Info Contact End -->
+<div class='blanter-msg'>Call us to <b>+62123456789</b> from <i>0:00hs a 24:00hs</i></div></div>
+<div class='start-chat hide'>
+<div class='first-msg'><span>Hello! What can I do for you?</span></div>
+<div class='blanter-msg'><textarea id='chat-input' placeholder='Write a response' maxlength='120' row='1'></textarea>
+<a href='javascript:void;' id='send-it'>Send</a></div></div>
+<div id='get-number'></div><a class='close-chat' href='javascript:void'>×</a>
+</div>
+<a class='blantershow-chat' href='javascript:void' title='Show Chat'><i class='fab fa-whatsapp'></i>How can I help you?</a>
+<!-------------------------------->
+</div>
+</div>
+</div>
+</div>
+
+<script>
+/*--------------------------SlideShow----------------------*/
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+
+		function currentDiv(n) {
+		  showDivs(slideIndex = n);
+		}
+		/*---------Loop Image ---------------*/
+		myFunction();
+		function myFunction() {
+		  setTimeout(function(){  showDivs(slideIndex += 1); myFunction();}, 5000);
+		}
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" w3-white", "");
+		  }
+		  x[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " w3-white";
+
+}
+
+
+</script>
+<script>
+/* Whatsapp Chat Widget by www.idblanter.com */
+$(document).on("click","#send-it",function(){var a=document.getElementById("chat-input");if(""!=a.value){var b=$("#get-number").text(),c=document.getElementById("chat-input").value,d="https://web.whatsapp.com/send",e=b,f="&text="+c;if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+var d="whatsapp://send";var g=d+"?phone="+e+f;window.open(g, '_blank')}}),$(document).on("click",".informasi",function(){document.getElementById("get-number").innerHTML=$(this).children(".my-number").text(),$(".start-chat,.get-new").addClass("show").removeClass("hide"),$(".home-chat,.head-home").addClass("hide").removeClass("show"),document.getElementById("get-nama").innerHTML=$(this).children(".info-chat").children(".chat-nama").text(),document.getElementById("get-label").innerHTML=$(this).children(".info-chat").children(".chat-label").text()}),$(document).on("click",".close-chat",function(){$("#whatsapp-chat").addClass("hide").removeClass("show")}),$(document).on("click",".blantershow-chat",function(){$("#whatsapp-chat").addClass("show").removeClass("hide")});
+</script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script  src="function.js"></script>
+
+<!-- Header -->
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+ 
+<script>
+  //Maps//
+    // The following example creates complex markers to indicate beaches near
+// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
+// to the base of the flagpole.
+function initMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 8,
+    center: { lat: 38.2, lng: 21.7 },
+     mapId : '8d55519323e7dd30',
+  });
+  setMarkers(map);
+}
+// Data for the markers consisting of a name, a LatLng and a zIndex for the
+// order in which these markers should display on top of each other.
+const beaches = [
+  ["Ioanna Gkoumplia", 37.981164923869585, 23.73522607421876, 4],
+  ["Dimitris Siamplis", 38.223036, 21.759052, 5],
+  ["Xristina Vlasi", 40.68002740878776, 22.970745061324756, 3],
+  ["Nikos Avouris", 38.20010128657071, 21.78747820854187, 2],
+  ["Xristos Sintoris", 38.250198, 21.759302, 1],
+];
+
+function setMarkers(map) {
+  // Adds markers to the map.
+  // Marker sizes are expressed as a Size of X,Y where the origin of the image
+  // (0,0) is located in the top left of the image.
+  // Origins, anchor positions and coordinates of the marker increase in the X
+  // direction to the right and in the Y direction down.
+  const image = {
+    url:
+      "http://www.simpleimageresizer.com/_uploads/photos/7e8b8ce0/location_next_school_train_real_estate_agency_agent_broker-512_20x32.png",
+    // This marker is 20 pixels wide by 32 pixels high.
+    size: new google.maps.Size(20, 32),
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(0, 32),
+  };
+  // Shapes define the clickable region of the icon. The type defines an HTML
+  // <area> element 'poly' which traces out a polygon as a series of X,Y points.
+  // The final coordinate closes the poly by connecting to the first coordinate.
+  const shape = {
+    coords: [1, 1, 1, 20, 18, 20, 18, 1],
+    type: "poly",
+  };
+
+  for (let i = 0; i < beaches.length; i++) {
+    const beach = beaches[i];
+    new google.maps.Marker({
+      position: { lat: beach[1], lng: beach[2] },
+      map,
+      icon: image,
+      shape: shape,
+      title: beach[0],
+      zIndex: beach[3],
+    });
+  }
+}
+
+
+</script>
+<script
+      src="https://maps.googleapis.com/maps/api/js?AIzaSyDX-_O6C_UtmKzgv5Y43qj5QWop7vW372U&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+</body>
+</html>

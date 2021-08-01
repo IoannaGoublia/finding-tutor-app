@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Edupro</title>
+      <link rel="stylesheet" href="/style3.css">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	    <link rel="icon" href="https://www.podilatis.gr/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/a/lastfs_4.jpg">
+           
+</head>
+
+
+<body>
+
+<div class="login-wrap">
+ 
+	<div class="login-html">
+       	<label >Sign In</label>
+		
+		<div class='login-form'>
+                         
+            <form action="/auth/login" method="POST">
+
+
+   
+
+			<div class="sign-in-htm">
+                
+                {{#if message}}
+				    <h4 style="color: red;">{{message}}</h4>
+			    {{/if}}
+				<div class="group">
+					<label for="email" class="label">Email</label>
+					<input id="email" type="text" class="input" name="email" required>
+				</div>
+
+				<div class="group">
+					<label for="password" class="label">Password</label>
+					<input id="password" type="password" class="input" data-type="password" name="password" required>
+				</div>
+
+
+				<div class="group">
+					<input type="submit" class="button" value="Sign In">
+				</div>
+
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#forgot">Forgot Password?</a>
+				</div>
+				<br><br>
+				<div class="foot-lnk">
+					<a href="/">Home Page</a>
+				</div>
+
+			 </div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+</body>
+</html>

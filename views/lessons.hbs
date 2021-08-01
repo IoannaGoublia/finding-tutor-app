@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+<title> EduPro </title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script> <!----------    media Slide down ---->
+	  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+           <link rel="stylesheet" href="/style4.css">
+               <link rel="icon" href="https://www.podilatis.gr/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/a/lastfs_4.jpg">
+           
+             <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="/style5.css"> 
+                  <link rel="stylesheet" href="/style7.css"> 
+</head>
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="topnav" id="myTopnav">
+                <a href="/auth/home">Home</a>
+       
+          <a href="/auth/categories">Categories</a>
+       
+          <a href="/auth/news">News</a>
+      
+          <a href="/auth/About">About</a>
+       
+        
+          <a href="/auth/contact">Contact</a>
+           <a href="/auth/logout">Logout</a>
+       
+          <a href="/auth/profile">Profile</a>
+         
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+{{#if message}}
+	<h4 style="color: red;">{{message}}</h4>
+{{/if}}
+
+
+
+<div class="contact">
+    <h3 style="text-align: center;">Create your Lessons Form</h3>
+    <br><br>
+    <div class="container">
+        <form action="/auth/CreateLesson" method="POST"> 
+
+        
+					<label for="lessonCategory" class="label">Choose a Category</label>
+          <select class="input" name="lessonCategory" id="lessonCategory" required >
+            <option value="ΠΑΝΕΠΙΣΤΗΜΙΟ">ΠΑΝΕΠΙΣΤΗΜΙΟ</option>
+            <option value="ΠΛΗΡΟΦΟΡΙΚΗ">ΠΛΗΡΟΦΟΡΙΚΗ</option>
+            <option value="ΑΘΛΗΤΙΚΑ">ΑΘΛΗΤΙΚΑ</option>
+            <option value="ΤΕΧΝΕΣ">ΤΕΧΝΕΣ</option>
+          </select>
+
+				<br>
+
+        <label for="lessonName">Lesson Name</label>
+        <input type="text" id="lessonName" name="lessonName" placeholder="Your lesson name.." required>
+        
+        <label for="Knowlegde">Knowlegde</label>
+        <textarea id="Knowlegde" name="Knowlegde" placeholder="Knowlegde.." required style="height:100px"></textarea>
+        
+        <label for="LessonReviews">Lesson Reviews</label>
+        <textarea id="LessonReviews" name="LessonReviews" placeholder="Lesson Reviews.." required style="height:100px"></textarea>
+
+        <label  for="priceperhour">Price per Hour</label> 
+        <input type="number" id="priceperhour" name="priceperhour" placeholder="Price per hour.." min="5" max="100" required>
+        
+        <br><br>
+        <input type="submit" value="Submit">
+
+    </form>
+    </div>
+   
+</div>
+
+
+
+<div id="education1" >
+  <div class="work-img"> <img style="height:80px; width:80px"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAilBMVEX///8AAAB6enp3d3fw8PD4+Pj8/PywsLC+vr7MzMz09PTs7OxDQ0Ph4eGIiIiSkpLU1NRXV1clJSXb29tgYGBPT0+bm5ulpaWAgIA+Pj7R0dFnZ2dvb2/n5+e4uLgkJCQzMzMSEhIdHR1KSko5OTmqqqoZGRksLCxBQUFbW1vExMQLCwuPj4+GhobWHsYEAAAHgUlEQVR4nO2d6ZaiMBCFVSAsyqIouCDubbdjv//rjYgCQqJAAgl96vvVI07IhSyVqkrs9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALoN4l2BJlHCeajwrkSDmNak3+9PLJN3RdgTtUtDnfWfzFS599da61LqvyIteVeJJWvv3C+y9da8K8YGpE0x8mKmWvdbqmttiPr692HH5V1FGpA6fisvZqx270WiaJhEen5wISPpvKtcnbV/LK0v4uh3athRtJ9K8mJ+tK5YO2v7/eBCZnPtwIs01ENNeTGHu7UjLk75wYWM5PCWgSMa79f2loG+iLO97glntiKdbLnUYaoLI/BeEdfaM9UXsRfE2omm9syyiC0zEawdpAcNyYsJOLfWqpZLHXhZOyiyXNgOLmSmXKyd9ZX94EJm37a1I6uspr7ybFu0dhzpX+v6Inbt+HbWXvuvL6VZ3040bF9WHOXFrC7PyrDH/OWt7sFvIy5lI6RbFrHloBqM9TVsudQhYOjbkf0RbzlYRj6T+eOdQ5c/9C5l0/7iLeIDe5ti2JHVBe/6l2JR09px5jveVS/Nbl7Ft4Oilj3ERotE5uwNe+UNAQEslzrE1s5n3DnvmlIw/zjsGGFTPpe2mIXvrJ0K0SKRIUWyDE9My6UOI6/wIpVL11tnnvGLb8e02/S5tMX++nApy6e/9vpSZqebtXPiXYuG8W/mi6BrIxaM/OFjkre6ZqOV4fwa2nHmdUPTYrLB2OJGmLNGZ4Hlq5puyt2zA1YawbCRs3Gy1XOq1C1+Va3DjLxcjEPV348vRqaPebE6NgyN7BIuY/cajTvj218D3vWtyPlaNmwcJWzdXiHCFvN1uArZbL+kasHUqKfqhVImku/crojnPL2NLXVCjK+N9PtXNeOHJHNSQWR2GtaQdzN20iJ+vGXSAnTBfAALr568G5ne9mwBxkUww2BrUSRQKZkw6F2hoUk7blJwVB1b8mQXHUYPaSs+gV8iq7cOmRKgbB6J0kOyL1R0zafPztCyBcYfmYJ4ckYekwhpNgd9kny69nk7BGasEojMbKmL7JWhGuw4qfu3UmvPDAWu2ZIPuYvKZdC+62o/uLDMjHo1SX8wX3CubXbK0ZV1Ko36Un6A/5J5KrNhhJ7xqYHci9fQ6ODxaXF+bbxT7gJM12OQTOO+3sZ6911DHzRlyW0GOuukkifX1zv5z89VreAgiJ4nWtrs80yP9hL7rmRNpReo5EZK7XlBivZh4eejIdOZcuzjp4V1tFdMoleo5e6XKIxXjDPPxT7dYRiwmET2QYh9iMj14ofIQGE+gyaJxyVr4q2Fb0KKPqcTuSHMesixkpxIeoXr/G2TuSi76p8ExU55F+kk7rqqLGynIO++SVqTsk55WoWoGKxJPFh559uUYEWtayxEDj5+1pPVfJOif4eFV5B0C4x7ceQ5ufYa//PWKcunU+2CEP+oXA/zqKgVmoUik9aId6AerWLjijAu0qSEvIl0wc56imPh5yBqhV6hyOQS0UU8kUJSp3yfOYbrevenowXEp0OtsJDHvfusMGJKaGkmsVMeCEvZYfg2H5JWYbGRpgvgT27+g02cKfOd8qvY9e7/FWG7HlOFfqHEdAFcIpCxveIdYErWEbmZ47se0q8ldgLQKiwaX7MqCvsfZ8pvQteT33Q9lgoL030aSawQjPo3JQTxXA0fHrrNeqW9lZQKiyNpsjysGG67dUrCPfLN2LQrWe2UCjH3SpeHVQOKZ4L5mlW7rJwmQacQF1eyayvsR2MmvlPGd9OkGnnkdAqXmBI9GoUR+E5ZNDhbUYjphukSnyLsPUs7Zbw3ulrXY6gQd9/Ua0AV2D8nkTCHLkOJSiE2vJss8elTFwJtrQW0QSwqhRdciWnKrRjJGVQKsRHsdFrrvELUw/aP1C/UeYU9A1tiugbovkIHV+Auncy6r1DFFbhJFzrdV4jd6LtN1zrdV4g1o77T651XiLBDaSYC3HmFBtbayBTYeYVDbIHzP6Sw6GaLyMRHO68Qa5VmFsDdV5iPG8aky8PuK8RO+JnlYU+M9Oc5WcEnQmyBYfoFMTZJeWQFn8D3w+WnL7RNSFbwCfxYmiyeEGHt0TYUuW0GLmhwzvrJRMjSH9cXeKNwzMfxNXmluEGhfWhPbTHVdIPXwS7ky/FOL+33R5QC7yBT15cONnrpfq5CwzR8uinq2ZwF/jYrMILvYDNtXmBP4ZnOflTaOJoW8duWMGrpqE+F18lR46ayTYvw2dwltXl6Mn6d1SwU5mgd5HaS2FNm7HZalEVtc5/enkHmc3VQe5O/zes3BdbtjDgDnr8nINu7pvVd5ccJa7ww/CYP5jt6QvxUgvu7a0bfXIxz5yOMcMV6ZN2vQsF+1wvpc3aH3EwGupC/yKK4PguLdeq5Qsp74p6k+sdhbyX/sYQXqHXiGOq+NK7WZidjydPbN8yoQIareoPx4v0QtFmMB566lAV/Z+9AytDVNdX3bOt3IAWr6SqQBnPL9qITmtyhkkrrsEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC/w3+3wofRvzTtHQAAAABJRU5ErkJggg==">
+    <h1>My subjects</h1>
+   </div>
+  
+   {{#each results}}
+  <div class="job-box" style=" border-style: inset;  border-color: rgb(74, 86, 110);">
+
+   <p style="color: rgb(74, 86, 110);"> Category: {{this.LessonCategory}} </p>
+   <p>Subject:  {{this.LessonName}}</p>
+   <p style="color: rgb(74, 86, 110);">Price per hour : {{this.LessonPricePerHour}} euros</p>
+   <p>Νecessary Κnowledge :{{this.LessonΝecessaryΚnowledge}}</p>
+  <p style="color: rgb(74, 86, 110);"> Reviews : {{this.LessonReviews}} <p>
+</div>
+{{/each}}
+
+
+
+
+
+
+
+
+  <style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+body{
+
+  background-image: url("https://cdn.wallpapered.com/wp-content/uploads/2018/09/01181104/OS-Street-BW.jpg");
+  background-color: grey;
+
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: grey;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: rgb(74, 86, 110);
+  padding: 20px;
+ width: 50%;
+
+}
+</style>
+<!-- Header -->
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>

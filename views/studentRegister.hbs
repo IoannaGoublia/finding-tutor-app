@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Edupro</title>
+      <link rel="stylesheet" href="/style3.css">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	    <link rel="icon" href="https://www.podilatis.gr/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/a/lastfs_4.jpg">
+           
+</head>
+
+
+<body>
+
+
+
+<div class="login-wrap">
+ 
+	<div class="login-html">
+
+		<div class="foot-lnk">
+				<a href="/">Go to Home Page</a>
+			</div>
+			<br><br><br>
+                 <label >Sign Up as Student</label>
+
+
+		
+		<div class='login-form'>
+             {{#if message}}
+				<h4 style="color: red;">{{message}}</h4>
+			{{/if}} 
+
+			           
+            <form action="/auth/register" method="POST">
+
+
+                <div class="sign-up-htm">
+				<div class="group">
+					<label for="FirstName" class="label">First Name</label>
+					<input id="FirstName" type="text" class="input" name="FirstName" required>
+				</div>
+
+                <div class="group">
+					<label for="LastName" class="label">Last Name</label>
+					<input id="LastName" type="text" class="input" name="LastName" required>
+				</div>
+                                
+				<div class="group">
+					<label for="password" class="label">Password</label>
+					<input id="password" type="password" class="input" data-type="password" name="password" required>
+				</div>
+
+				<div class="group">
+					<label for="passwordRepeat" class="label">Repeat Password</label>
+					<input id="passwordRepeat" type="password" class="input" data-type="password" name="passwordRepeat" required>
+				</div>
+
+				<div class="group">
+					<label for="email" class="label">Email Address</label>
+					<input id="email" type="email" class="input" name="email" required>
+				</div>
+
+                <div class="group">
+					<label for="phone" class="label">Phone</label>
+					<input id="phone" type="text" class="input" name="phone" required>
+				</div>
+                <div class="group">
+					<label for="location" class="label">Location</label>
+					<input id="location" type="text" class="input" name="location" required>
+				</div>
+
+                <div class="group">
+					<label for="address" class="label">Address</label>
+					<input id="address" type="text" class="input" name="address" required>
+				</div>
+				
+                <div class="group">
+			        <input  type="submit" class="button" value="Sign Up"></div>
+                </div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+</body>
+</html>

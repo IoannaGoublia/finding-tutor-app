@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style8.css">
+     <link rel="stylesheet" href="/style5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+<body>
+    <!-- Navbar (sit on top) -->
+<div class="topnav" id="myTopnav">
+                <a href="/auth/home">Home</a>
+       
+          <a href="/auth/categories">Categories</a>
+       
+          <a href="/auth/news">News</a>
+      
+          <a href="/auth/About">About</a>
+       
+        
+          <a href="/auth/contact">Contact</a>
+           <a href="/auth/logout">Logout</a>
+       
+          <a href="/auth/profile">Profile</a>
+         
+          
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+{{#if message}}
+	<h3 style="color: red;">{{message}}</h3>
+{{/if}}
+    {{#each results}}
+    <div class="container">
+      
+        <div class="shape">
+           
+            <div class="image"></div>
+              
+        </div>
+        <h3>Name: {{this.StudentLastName}}
+                      {{this.StudentFirstName}}</h3>
+        <h3 class="title">Phone : {{this.StudentPhone}}</h3>
+        <p>Email: {{this.StudentEmail}}</p><br>
+        <p>Location : {{this.StudentAddress}}, {{this.StudentLocation}}</p>
+       
+    </div>
+    {{/each}}
+
+
+    <!-- Header -->
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+
+</html>

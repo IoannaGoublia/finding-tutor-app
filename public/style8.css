@@ -1,0 +1,92 @@
+
+body {
+	margin: 0;
+	padding: 0;
+    background-color:	rgba(40,57,101,.9);
+    font-family: 'Righteous', cursive;
+    background-image: url("https://cdn.wallpapered.com/wp-content/uploads/2018/09/01181104/OS-Street-BW.jpg");
+    
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+}
+
+
+
+.container {
+    top: 50%;
+    left: 50%;
+    height: 450px;
+    width: 300px;
+    box-shadow: 0 10px 20px black;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Righteous', cursive;
+    background-color:	rgba(40,57,101,.9);
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+    background-image: url('https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png');
+    background-size: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    position: relative;
+    top: 200px;
+    margin-left: 170px;
+    box-shadow: 0 2px 15px rgb(58, 54, 54);
+    transform: rotate(-20deg);
+}
+
+.shape {
+    height: 250px;
+    width: 400px;
+    background-color: cadetblue;
+    margin-left: -20px;
+    position: relative;
+    top: -80px;
+    box-shadow: 0 2px 15px black;
+    transform: rotate(25deg);
+}
+
+h3 {
+    margin-bottom: 10px;
+    
+}
+
+.title {
+    color: rgb(105, 100, 109);
+}
+
+p {
+    padding-left: 30px;
+    padding-right: 30px;
+    color:blanchedalmond;
+}
+
+.icons {
+    margin-top: 15px;
+}
+
+.icons i {
+    margin-left: 10px;
+    font-size: 20px;
+    transition: 0.3s;
+    color: rgb(40, 163, 194);
+    ;
+}
+
+.icons i:hover {
+    transform: scale(1.1);
+    color: rgb(18, 192, 235);
+}

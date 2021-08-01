@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<title>Edupro</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script> <!----------    media Slide down ---->
+	  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+           <link rel="stylesheet" href="/style4.css">
+             <link rel="icon" href="https://www.podilatis.gr/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/a/lastfs_4.jpg">
+           
+             <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/style5.css"> 
+</head>
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+
+  <section class="nav-bar">
+  <div class="nav-container">
+    <div class="brand">
+     <img src="/Users/User/Desktop/Edupro/logor.png"class="w3-circle" style="height:60px;width:60;">
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="/auth/home">Home</a>
+        </li>
+        <li>
+          <a href="/auth/categories">Categories</a>
+        </li>
+        <li>
+          <a href="/auth/news">News</a>
+        </li>
+        
+        <li>
+          <a href="/auth/About">About</a>
+        </li>
+        <li>
+          <a href="/auth/contact">Contact</a>
+        </li>
+        <li>
+          <a href="/auth/logout">Logout</a>
+        </li>
+        <li>
+          <a href="/auth/profile">Profile</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+{{#if message}}
+	<h4 style="color: red;">{{message}}</h4>
+{{/if}}
+
+
+<h2>Profile Page</h2>
+
+
+</body>
+</html>
